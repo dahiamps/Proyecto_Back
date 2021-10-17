@@ -1,0 +1,25 @@
+{
+  "name": "Proyecto_Back",
+  "version": "1.0.0",
+  "description": "Repositorio que contiene el back del proyecto",
+  "main": "index.js",
+  "scripts": {
+    "dev": " nodemon app",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/dahiamps/Proyecto_Back.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/dahiamps/Proyecto_Back/issues"
+  },
+  "homepage": "https://github.com/dahiamps/Proyecto_Back#readme",
+  "dependencies": {
+    "express": "^4.17.1",
+    "mysql": "^2.18.1"
+  }
+}
