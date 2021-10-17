@@ -14,7 +14,7 @@ const connection = require('./database/db');
 app.get('/', function (req, res) {
     res.send('Ruta de inicio')
 })
-
+// 2.1 - listar todos los usuarios NOTA: se usaran para poder generar el inicio de sesion en el front
 app.get('/api/usuarios', (req, res) => {
     connection.query('SELECT * FROM usuarios', (error, respuesta) => {
         if (error) {
@@ -24,7 +24,7 @@ app.get('/api/usuarios', (req, res) => {
         }
     })
 })
-
+// 2.2 - Crear usuario
 app.post('/api/usuarios', (req, res) => {
     let data = { Nombre: req.body.Nombre, Usuario: req.body.Usuario, Contraseña: req.body.Contraseña, Pais: req.body.Pais, Ciudad: req.body.Ciudad, Direccion: req.body.Direccion };
     let sql = "INSERT INTO usuarios SET ?";
@@ -36,7 +36,7 @@ app.post('/api/usuarios', (req, res) => {
         }
     });
 });
-    // levantamos servidor 
-    app.listen('3000', function () {
-        console.log(`servidor OK`);
-    })
+// 3 - levantamos servidor 
+app.listen('3000', function () {
+    console.log(`servidor OK`);
+})
